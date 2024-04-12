@@ -50,14 +50,14 @@ Given the advantage of Yelp API, it was chosen for further analysis.
 2. **Model Result**:
     * The results from the Linear Regression Model were not particularly bright. Due to the dataset, it appears that there is minimal correlation observed among the numerical variables.
 
-	![pairplot](https://github.com/ThuyTran102/Statistical-Modelling-Project/tree/main/images/pairplot.png)
+	![pairplot](https://github.com/ThuyTran102/Statistical-Modelling-Project/blob/main/images/pairplot.png)
 	
-	![heatmap](https://github.com/ThuyTran102/Statistical-Modelling-Project/tree/main/images/heatmap.png)
+	![heatmap](https://github.com/ThuyTran102/Statistical-Modelling-Project/blob/main/images/heatmap.png)
 
     * Overall Linear Regression model with 2 independent varibales (Longitude and Distance) appears to be statistically significant. **The characteristics of longitude and distance to nearby POIs appear to be the most important predictors of the number of bikes at bike stations.**. However, the model doesn't well fits the data. The Adj. R-squared is extremely low (0.003) meaning that this model is capable of explaining 0.3% of the patterns in the data ---> this model explains only a very small portion of the variation in the dependent variable.
 	* The **target varibale 'Number_Of_Bikes' is not a continuous data**, so Regression Model is not appropriate.
 
-	![model_output](https://github.com/ThuyTran102/Statistical-Modelling-Project/tree/main/images/model_output.png)
+	![model_output](https://github.com/ThuyTran102/Statistical-Modelling-Project/blob/main/images/model_output.png)
 
 
 ## Challenges 
