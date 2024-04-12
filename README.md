@@ -1,9 +1,9 @@
 # Final-Project-Statistical-Modelling-with-Python
 
-## Project/Goals
+## Project Objectives
 The project aims to utilize the CityBikes API to gather data on bike stations, connect to Foursquare and Yelp APIs to retrieve information on nearby points of interest, and build a statistical model to understand the relationship between bike availability and surrounding characteristics. 
 
-## Process
+## Process Overview
 ### Step 1: Collecting information on bike stations in a particular city using the CityBikes API
 * Sending a request to the CityBikes API to retrieve the data source.
 * Selecting New York City and retrieving all available bike stations in that city.
@@ -15,12 +15,13 @@ The project aims to utilize the CityBikes API to gather data on bike stations, c
 * Sending requests to the Foursquare API and Yelp API to retrieve POIs within a 10,000-meter radius for each bike station based on latitude and longitude.
 * Using a loop to parse the JSON object to obtain POI details such as name, address, and distance from the bike station, as well as phone, rating, price, review_count, url, and category.
 * For analysis purposes, the POIs will include: 'restaurant', 'coffee', 'bar', 'hotel', 'park', 'shopping', 'supermarket', 'museum', 'stadium', 'cinema', 'bus', 'school', 'hospital'.
+* Analyzing the results from both APIs to determine which one provides more comprehensive information
 * Putting the results into Pandas dataframes.
 * Storing the dataframes in CSV files.
 
 ### Step 3: Joining - Loading - Performing EDA
-* Creating new dataframe by joing data from Step 1 and Step 2
-* Loading data collected on POIs into SQLite3 database. Validate data.
+* Merging the data from Citybikes with the data from either Foursquare or Yelp to create a new dataframe
+* Establishing a SQLite database to store the data collected from the APIs on POIs into SQLite3 database. Validate data.
 * Exploratory Data Analysis
 	- Take a premilinary look to get a brief overview of dataset
 	- Explore data by descriptive statistics
@@ -37,21 +38,26 @@ The project aims to utilize the CityBikes API to gather data on bike stations, c
 * Iterating to find the best model
 
 
-## Results
-(_fill in what you found about the comparative quality of API coverage in your chosen area and the results of your model._)
-1. **API**: 
-For my location (New York city), YELP API provided me with more complete data than FOURSQUARE API.
+## Results Summary
+
+1. **APIs**: 
+After comparing the quality of data coverage between the Foursquare API and Yelp API for New York, US, it was found that YELP API provided more detailed information.
     * FOURSQUARE API: has not yet covered the attributes I want, such as rating, main/max_price,etc... even though its documentation says it does.
-    * YELP API: provides a lot of different interesting attributes for each POI, such as review_count, rating, price, phone, even business url, menu url, etc...
-	    - However, YELP API has one drawback. It doesn't support to looking for many categories at a time, for example:
-            - With FOURSQUARE API, we can search 'restaurant,coffees' at one time;
-		    - while with YELP API, we can only search 'restaurant' then later search 'coffee' , but I am still fine with that.
+    * YELP API: provides a lot of different interesting attributes for each POI, such as review count, rating, price, phone, even business url, menu url, etc...
+	    - However, YELP API has one drawback. It does not support to looking for many categories at one single API call. With FOURSQUARE API, we can search 'restaurant,coffees' at one time; while with YELP API, we search 'restaurant' then later search 'coffee'.
+Given the advantage of Yelp API, it was chosen for further analysis.
 
 2. **Model Result**:
-    * Most of characteristics of POI I collected do not have a significant effect on the number of bike of stations in that location.
-    * Overall Linear Regression model with 2 independent varibales (Longitude and Distance) appears to be statistically significant. Longitude and Distance characteristic of nearby POIs appears to be the most important predictor of the number of bikes at bike stations. However, the model doesn't well fits the data. The Adj. R-squared is extremely low (0.003) meaning that this model is capable of explaining 0.3% of the patterns in the data ---> this model explains only a very small portion of the variation in the dependent variable.
-	* The **target varibale 'Number_Of_Bikes' is not a continuous data**, so Regression Model is not appropriate.
+    * The results from the Linear Regression Model were not particularly bright. Due to the dataset, it appears that there is minimal correlation observed among the numerical variables.
+
+	![pairplot](https://github.com/ThuyTran102/Statistical-Modelling-Project/tree/main/images/pairplot.png)
 	
+	![heatmap](https://github.com/ThuyTran102/Statistical-Modelling-Project/tree/main/images/heatmap.png)
+
+    * Overall Linear Regression model with 2 independent varibales (Longitude and Distance) appears to be statistically significant. **The characteristics of longitude and distance to nearby POIs appear to be the most important predictors of the number of bikes at bike stations.**. However, the model doesn't well fits the data. The Adj. R-squared is extremely low (0.003) meaning that this model is capable of explaining 0.3% of the patterns in the data ---> this model explains only a very small portion of the variation in the dependent variable.
+	* The **target varibale 'Number_Of_Bikes' is not a continuous data**, so Regression Model is not appropriate.
+
+	![model_output](https://github.com/ThuyTran102/Statistical-Modelling-Project/tree/main/images/model_output.png)
 
 
 ## Challenges 
