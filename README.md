@@ -1,9 +1,9 @@
-# Final-Project-Statistical-Modelling-with-Python
+# Project Statistical Modeling with Python
 
-## Project Objectives
+## Project Objectives:
 The project aims to utilize the CityBikes API to gather data on bike stations, connect to Foursquare and Yelp APIs to retrieve information on nearby points of interest, and build a statistical model to understand the relationship between bike availability and surrounding characteristics. 
 
-## Process Overview
+## Process Overview:
 ### Step 1: Collecting information on bike stations in a particular city using the CityBikes API
 * Sending a request to the CityBikes API to retrieve the data source.
 * Selecting New York City and retrieving all available bike stations in that city.
@@ -38,7 +38,7 @@ The project aims to utilize the CityBikes API to gather data on bike stations, c
 * Iterating to find the best model
 
 
-## Results Summary
+## Results Summary:
 
 1. **APIs**: 
 After comparing the quality of data coverage between the Foursquare API and Yelp API for New York, US, it was found that YELP API provided more detailed information.
@@ -50,17 +50,24 @@ Given the advantage of Yelp API, it was chosen for further analysis.
 2. **Model Result**:
     * The results from the Linear Regression Model were not particularly bright. Due to the dataset, it appears that there is minimal correlation observed among the numerical variables.
 
-	![pairplot](https://github.com/ThuyTran102/Statistical-Modelling-Project/blob/main/images/pairplot.png)
-	
-	![heatmap](https://github.com/ThuyTran102/Statistical-Modelling-Project/blob/main/images/heatmap.png)
+<p align="center" style="margin-top: 20px; margin-bottom: 20px;">
+<img width="90%" src="https://github.com/ThuyTran102/Statistical-Modelling-Project/blob/main/images/pairplot.png" alt="pairplot"></img>
+</p>	
 
-    * Overall Linear Regression model with 2 independent varibales (Longitude and Distance) appears to be statistically significant. **The characteristics of longitude and distance to nearby POIs appear to be the most important predictors of the number of bikes at bike stations.**. However, the model doesn't well fits the data. The Adj. R-squared is extremely low (0.003) meaning that this model is capable of explaining 0.3% of the patterns in the data ---> this model explains only a very small portion of the variation in the dependent variable.
-	* The **target varibale 'Number_Of_Bikes' is not a continuous data**, so Regression Model is not appropriate.
+<p align="center" style="margin-top: 20px; margin-bottom: 20px;">
+<img width="70%" src="https://github.com/ThuyTran102/Statistical-Modelling-Project/blob/main/images/heatmap.png" alt="heatmap"></img>
+</p>	
 
-	![model_output](https://github.com/ThuyTran102/Statistical-Modelling-Project/blob/main/images/model_output.png)
+
+* Overall Linear Regression model with 2 independent varibales (Longitude and Distance) appears to be statistically significant. **The characteristics of longitude and distance to nearby POIs appear to be the most important predictors of the number of bikes at bike stations.**. However, the model doesn't well fits the data. The Adj. R-squared is extremely low (0.003) meaning that this model is capable of explaining 0.3% of the patterns in the data ---> this model explains only a very small portion of the variation in the dependent variable.
+* The **target varibale 'Number_Of_Bikes' is not a continuous data**, so Regression Model is not appropriate.
+
+<p align="center" style="margin-top: 20px; margin-bottom: 20px;">
+<img width="70%" src="https://github.com/ThuyTran102/Statistical-Modelling-Project/blob/main/images/model_output.png" alt="model_ouput"></img>
+</p>	
 
 
-## Challenges 
+## Challenges:
 1. Limit usage for YELP API is 500 call per day
 	- Initially, I chose Vancouver and found 250 bike stations and 2 POIs in order to stay within the limitation. However, with only 2 POIs, the data was insufficient for robust analysis and statistical modeling purposes. Unfortunately, by the time I finished Part 3, I had to restart the process to find another city with fewer bike stations to gather more POI data. Actually, 37 bike stations dataset is small quantity for analysis.
 	- Each time I ran the code to test, it consumed the daily API limit.
