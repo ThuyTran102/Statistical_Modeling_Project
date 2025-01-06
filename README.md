@@ -6,7 +6,7 @@
 
 ## Table of Contents:
 - [Project Objectives](https://github.com/ThuyTran102/Statistical_Modeling_Project/tree/main?tab=readme-ov-file#project-objectives)
-- [process Overview](https://github.com/ThuyTran102/Statistical_Modeling_Project/tree/main?tab=readme-ov-file#process-overview)
+- [Process Overview](https://github.com/ThuyTran102/Statistical_Modeling_Project/tree/main?tab=readme-ov-file#process-overview)
 - [Results Summary](https://github.com/ThuyTran102/1__Credit_Card_Transactions_Fraud_Detection?tab=readme-ov-file#results-summary)
 - [Challegens](https://github.com/ThuyTran102/Statistical_Modeling_Project/tree/main?tab=readme-ov-file#challenges)
 - [Future Goals](https://github.com/ThuyTran102/Statistical_Modeling_Project/tree/main?tab=readme-ov-file#challenges)
