@@ -1,7 +1,18 @@
-# Project Statistical Modeling with Python
+# Bike Availability Analysis 
+### Project Data Mining & Statistical Modeling with Python
+<p align="center" style="margin-top: 20px; margin-bottom: 20px;">
+<img width="50%" src="https://github.com/ThuyTran102/Statistical_Modeling_Project/blob/main/images/bike.png" alt="bike"></img>
+</p>
+
+## Table of Contents:
+- [Project Objectives](https://github.com/ThuyTran102/Statistical_Modeling_Project/tree/main?tab=readme-ov-file#project-objectives)
+- [process Overview](https://github.com/ThuyTran102/Statistical_Modeling_Project/tree/main?tab=readme-ov-file#process-overview)
+- [Results Summary](https://github.com/ThuyTran102/1__Credit_Card_Transactions_Fraud_Detection?tab=readme-ov-file#results-summary)
+- [Challegens](https://github.com/ThuyTran102/Statistical_Modeling_Project/tree/main?tab=readme-ov-file#challenges)
+- [Future Goals](https://github.com/ThuyTran102/Statistical_Modeling_Project/tree/main?tab=readme-ov-file#challenges)
 
 ## Project Objectives:
-The project aims to utilize the CityBikes API to gather data on bike stations, connect to Foursquare and Yelp APIs to retrieve information on nearby points of interest, and build a statistical model to understand the relationship between bike availability and surrounding characteristics. 
+The project aims to utilize the **CityBikes API** to gather data on bike stations, connect to **Foursquare API** and **Yelp API** to retrieve information on nearby points of interest, and build a statistical model to understand the relationship between bike availability and surrounding characteristics. 
 
 ## Process Overview:
 ### Step 1: Collecting information on bike stations in a particular city using the CityBikes API
@@ -74,7 +85,7 @@ Given the advantage of Yelp API, it was chosen for further analysis.
 2. Data I collected is not enough in term of quantity and probably including quality, so my dataset does not reveal the strong correlated relationship between bike stations and nearby POIs as initially anticipated. Model results are not good even though I tried to revisit EDA process.
 
 
-## Future Goals
+## Future Goals:
 If I had more time, I would consider the following:
 * Investigate additional data sources or APIs that provide more comprehensive coverage of POIs 
 * Collecting more data.
